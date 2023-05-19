@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "615bad66-3b18-4df7-8412-af8c4052d063",
+		"name": "Appgain.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19216036"
+	},
+	"item": [
+		{
+			"name": "Appgain",
+			"item": [
+				{
+					"name": "Upload Photo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "appApiKey",
+								"value": "dcffa92bda504e6c5f2ad8b04e453b54d2871d53c43a4a8e916e765d9a005ea6"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/Abdallah Hussien/Desktop/Appgain/Untitled.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.appgain.io/61a4858d0871b3000fb71d6f/upload",
+							"protocol": "https",
+							"host": [
+								"api",
+								"appgain",
+								"io"
+							],
+							"path": [
+								"61a4858d0871b3000fb71d6f",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://api.appgain.io"
+		}
+	]
+}
